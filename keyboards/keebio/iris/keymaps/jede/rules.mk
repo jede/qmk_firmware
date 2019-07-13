@@ -1,5 +1,6 @@
 RGBLIGHT_ENABLE = no
 BACKLIGHT_ENABLE = no
 
+BOOTLOADER = atmel-dfu
 MOUSEKEY_ENABLE = yes
 UNICODEMAP_ENABLE = yes  	# Emojify me pls
