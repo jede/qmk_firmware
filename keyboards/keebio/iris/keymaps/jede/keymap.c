@@ -8,72 +8,6 @@ extern keymap_config_t keymap_config;
 #define _ADJUST 16
 
 
-enum emoji_map {
-  UNAM, // unamused 😒
-  HEYE, // smiling face with heart shaped eyes 😍
-  OK, // ok hand sign 👌
-  SMIR, // smirk 😏
-  PRAY, // pray 🙏
-  CELE, // celebration 🙌
-  COOL, // smile with sunglasses 😎
-  EYES, // eyes
-  THNK, // BIG THONK
-  NAIL, // Nailcare
-  SOS, // Vuile sos
-  REDB, // Red B
-  HNDR, // 100
-  MONY,
-  FIRE,
-  CAR,
-  BUTT,
-  BNIS,
-  CUM,
-  CLAP,
-  TRIU, // Fart from nose
-  SCRM,
-  VOMI,
-  DTIV, // Detective
-  EXPL, // Brainsplosion
-  HAIR, // Haircut
-  DANC, // Salsa dancer
-  STRN, // Stronk
-  LEFT, // Point Left
-  RGHT, // Point Right
-};
-
-const uint32_t PROGMEM unicode_map[] = {
-  [UNAM] = 0x1F612,
-  [HEYE] = 0x1f60d,
-  [OK]   = 0x1F44C,
-  [SMIR] = 0x1F60F,
-  [PRAY] = 0x1F64F,
-  [CELE] = 0x1F64C,
-  [COOL] = 0x1F60E,
-  [EYES] = 0x1F440,
-  [THNK] = 0x1F914,
-  [NAIL] = 0x1F485,
-  [SOS] = 0x1F198,
-  [REDB] = 0x1F171,
-  [HNDR] = 0x1F4AF,
-  [MONY] = 0x1F480,
-  [FIRE] = 0x1F525,
-  [CAR] = 0x1F697,
-  [BUTT] = 0x1F351,
-  [BNIS] = 0x1F346,
-  [CUM] = 0x1F4A6,
-  [CLAP] = 0x1F44F,
-  [TRIU] = 0x1F624,
-  [SCRM] = 0x1F631,
-  [VOMI] = 0x1F92E,
-  [DTIV] = 0x1F575,
-  [EXPL] = 0x1F92F,
-  [HAIR] = 0x2640,
-  [DANC] = 0x1F483,
-  [STRN] = 0x1F4AA,
-  [LEFT] = 0x1F448,
-  [RGHT] = 0x1F449,
-};
-
 
 
 enum custom_keycodes {
@@ -115,7 +49,7 @@ SFT_T(KC_ESC), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                        
      _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
      OSM(MOD_HYPR), LGUI(KC_NUBS), LCTL(LGUI(KC_ENT)), _______, KC_LCBR, KC_RCBR,            KC_LBRC, KC_RBRC, _______, _______, _______, _______,
      _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,                            A(KC_LBRC), A(KC_QUOT), A(KC_SCLN), _______, _______, _______,
-     _______, KC_TILD, _______, X(HEYE), KC_SPC,  KC_BSPC, _______,          _______, KC_BSLS, KC_PIPE, KC_SLSH, _______, LGUI(KC_BSLS), _______,
+     _______, KC_TILD, _______, _______, KC_SPC,  KC_BSPC, _______,          _______, KC_BSLS, KC_PIPE, KC_SLSH, _______, LGUI(KC_BSLS), _______,
                                     _______, _______, _______,                   _______, _______, _______
   ),
 
@@ -128,10 +62,10 @@ SFT_T(KC_ESC), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                        
   ),
 
   [_ADJUST] = LAYOUT(
-     RESET, _______, _______, _______, _______, _______,                              _______, _______, _______, _______, _______, _______,
-     _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
-     _______, _______, SMALLDR, LGUI(KC_NUBS), LCTL(LGUI(KC_ENT)), _______,           G(S(KC_LEFT)), _______, _______, G(S(KC_RGHT)), _______, _______,
-     _______, _______, _______, CONFETTI, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+     RESET, RGB_TOG, RGB_MOD, _______, _______, _______,                              _______, _______, _______, _______, _______, _______,
+     RGB_HUD, RGB_HUI, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
+     RGB_SAD, RGB_SAI, SMALLDR, LGUI(KC_NUBS), LCTL(LGUI(KC_ENT)), _______,           G(S(KC_LEFT)), _______, _______, G(S(KC_RGHT)), _______, _______,
+     RGB_VAD, RGB_VAI, _______, CONFETTI, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
                                     _______, _______, _______,                   _______, _______, _______
   )
 };
